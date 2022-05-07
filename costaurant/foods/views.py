@@ -7,3 +7,7 @@ def index(request):
     context = {"date": today}
     return render(request, 'foods/index.html', context=context)
 
+
+def food_detail(req, food):
+    context = {'name': food}
+    return render(req, 'foods/detail.html', context=context)
